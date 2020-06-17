@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod
 import org.springframework.web.bind.annotation.RequestParam
 import java.time.LocalDate
 import org.springframework.data.domain.Example
+import org.springframework.security.access.annotation.Secured
 import org.springframework.validation.AbstractBindingResult
 import org.springframework.validation.BindingResult
 import javax.validation.Valid
@@ -30,11 +31,11 @@ class UserController (val userRepository: UserRepository,
 
 
     @RequestMapping("/editUser", method = [RequestMethod.GET])
+    @Secured("ROLE_ADMIN")
     fun editUser(model: Model, @RequestParam(required = false) username: String?): String {
-        model.set("programs", programRepository.findAll())
-        model.set("exercises", exerciseRepository.findAll())
+        //model.set("programs", programRepository.findAll())
+        //model.set("exercises", exerciseRepository.findAll())
         if (username != null) {
-            val example = User(username= username)
             val user = userRepository.findByUsername(username);
             model.set("user", user)
         } else {
@@ -46,6 +47,7 @@ class UserController (val userRepository: UserRepository,
     }
 
     @RequestMapping("/changeUser", method = [RequestMethod.POST])
+    @Secured("ROLE_ADMIN")
     fun changeUser(@ModelAttribute ("user") @Valid user: User,
                    bindingResult: BindingResult, model: Model): String {
         if (bindingResult.hasErrors()) {
@@ -75,9 +77,9 @@ class UserController (val userRepository: UserRepository,
         return "listUser"
     }
 
-    @RequestMapping("/deleteUser", method = [RequestMethod.GET])
+    @RequestMapping("/deleteUser", method = [RequestMethod.POST])
+    @Secured("ROLE_ADMIN")
     fun deleteUser(model: Model, @RequestParam username: String): String {
-        val example = User(username = username)
         val user = userRepository.findByUsername(username);
         userRepository.delete(user);
         model.set("message", "User $username deleted")

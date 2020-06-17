@@ -42,7 +42,11 @@
         </div>
         </li>
         </ul>
-        </div>
+            Logged in as ${currentUser.username} |
+            <form:form method="post" action="/logout">
+                    <button class="btn btn-link" type="submit">Log Out</button>
+            </form:form>
+            </div>
         </div>
         </nav>
 

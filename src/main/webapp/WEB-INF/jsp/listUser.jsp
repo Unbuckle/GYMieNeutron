@@ -7,12 +7,15 @@
 <%@taglib prefix="bootstrap" tagdir="/WEB-INF/tags/bootstrap" %>
 <%@taglib prefix="layout" tagdir="/WEB-INF/tags/layout" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+
+
 
 
 <layout:page-container title="User" activePage="listUser">
 
     <div class="page-header">
-        <h1>User Management</h1>
+        <h2>User Management</h2>
     </div>
 
     <!--  Messages  ----------------------------------------------------------- -->
@@ -52,7 +55,10 @@
         </div>
         <div class="col-md-4">
             <p>
-                <a href="/editUser" class="btn btn-success">Add new User</a>
+                <sec:authorize access="hasAuthority('ROLE_ADMIN')">
+                    <a href="/editUser" class="btn btn-success">Add new User</a>
+                </sec:authorize>
+
             </p>
         </div>
     </div>
@@ -84,8 +90,12 @@
                             <fmt:formatDate value="${parsedDate}" type="date" pattern="dd.MM.yyyy"/>
                         </td>
                         <td>
-                            <a href="editUser?username=${user.username}" class="btn btn-xs btn-success">Edit</a>
-                            <a href="deleteUser?username=${user.username}" class="btn btn-xs btn-danger">Delete</a>
+                            <sec:authorize access="hasAuthority('ROLE_ADMIN')">
+                                <a href="/editUser?username=${user.username}" class="btn btn-success">Edit User</a>
+                                <form:form method="post" action="/deleteUser?username=${user.username}">
+                                    <button type="submit" class="btn btn-xs btn-danger">Delete</button>
+                                </form:form>
+                        </sec:authorize>
                         </td>
                     </tr>
                 </c:forEach>

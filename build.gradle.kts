@@ -26,6 +26,9 @@ dependencies {
 	compileOnly("org.apache.tomcat.embed:tomcat-embed-jasper")
 	implementation("javax.servlet:jstl")
 	implementation("org.springframework.boot:spring-boot-starter-security")
+	// spring-security-taglibs
+	implementation("org.springframework.security:spring-security-taglibs")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 
