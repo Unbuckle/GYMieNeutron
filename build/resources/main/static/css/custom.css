@@ -3,7 +3,7 @@ body {
 }
 header .scroll-btn {
     position: absolute;
-    bottom: 400px;
+    bottom: 350px;
     left: 50%;
     z-index: 2;
     display: inline-block;
@@ -41,4 +41,8 @@ header .header-title {
 
 header .scroll-container. {
     padding-left: 45px;
+}
+
+.program-list .br-line{
+    margin-bottom: 90px;
 }
