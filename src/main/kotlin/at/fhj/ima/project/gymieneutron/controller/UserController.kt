@@ -92,18 +92,68 @@ class UserController (val userRepository: UserRepository,
         return "menWorkout"
     }
 
+    @RequestMapping("/mAbs", method = [RequestMethod.GET])
+    fun mAbs(model: Model): String {
+        model.set("exercise", exerciseRepository.findAll())
+        return "mAbs"
+    }
+
+    @RequestMapping("/mArms", method = [RequestMethod.GET])
+    fun mArms(model: Model): String {
+        model.set("exercise", exerciseRepository.findAll())
+        return "mArms"
+    }
+
+    @RequestMapping("/mBack", method = [RequestMethod.GET])
+    fun mBack(model: Model): String {
+        model.set("exercise", exerciseRepository.findAll())
+        return "mBack"
+    }
+
+    @RequestMapping("/mLegs", method = [RequestMethod.GET])
+    fun mLegs(model: Model): String {
+        model.set("exercise", exerciseRepository.findAll())
+        return "mLegs"
+    }
+
+
     @RequestMapping("/womenWorkout", method = [RequestMethod.GET])
     fun womenWorkout(model: Model): String {
         model.set("programs", programRepository.findAll())
         return "womenWorkout"
     }
 
+    @RequestMapping("/wAbs", method = [RequestMethod.GET])
+    fun wAbs(model: Model): String {
+        model.set("exercise", exerciseRepository.findAll())
+        return "wAbs"
+    }
+
+    @RequestMapping("/wArms", method = [RequestMethod.GET])
+    fun wArms(model: Model): String {
+        model.set("exercise", exerciseRepository.findAll())
+        return "wArms"
+    }
+
+    @RequestMapping("/wBack", method = [RequestMethod.GET])
+    fun wBack(model: Model): String {
+        model.set("exercise", exerciseRepository.findAll())
+        return "wBack"
+    }
+
+    @RequestMapping("/wLegs", method = [RequestMethod.GET])
+    fun wLegs(model: Model): String {
+        model.set("exercise", exerciseRepository.findAll())
+        return "wLegs"
+    }
 
     @RequestMapping ("/start", method = [RequestMethod.GET])
     fun start (model: Model): String {
         model.set("programs", programRepository.findAll())
         return "start"
     }
+
+
 
 }
 

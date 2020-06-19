@@ -46,13 +46,6 @@ header .scroll-container. {
 .program-list .br-line{
     margin-bottom: 90px;
 }
-/*.program-list .choose-programs .program-card .detail {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    color: black;
-    padding: 0 20px 20px;
-}*/
 
 .program-list .choose-programs .each-program .program-pic {
     display: flex;

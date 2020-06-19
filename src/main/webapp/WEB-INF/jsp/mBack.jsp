@@ -18,7 +18,7 @@
 
 
 
-<layout:page-container title="User" activePage="mAbs">
+<layout:menpage-container title="Fitness Programs" activePage="menWorkout">
 <html>
 <head>
     <title>Title</title>
@@ -28,4 +28,4 @@
 </body>
 </html>
 
-</layout:page-container>
+</layout:menpage-container>

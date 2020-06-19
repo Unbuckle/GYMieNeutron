@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: lolik
-  Date: 19.06.2020
-  Time: 12:07
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -18,7 +11,7 @@
 
 
 
-<layout:page-container title="User" activePage="mAbs">
+<layout:menpage-container title="Fitness Programs" activePage="menWorkout">
 <html>
 <head>
     <title>Title</title>
@@ -28,4 +21,4 @@
 </body>
 </html>
 
-</layout:page-container>
+</layout:menpage-container>

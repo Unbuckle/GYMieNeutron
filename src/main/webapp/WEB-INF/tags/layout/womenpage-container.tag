@@ -12,7 +12,7 @@
         <bootstrap:bootstrap-metadata/>
         <title>${title}</title>
         <bootstrap:bootstrap-css/>
-        <link rel="stylesheet" href="<c:url value="/css/custom.css"/>">
+        <link  rel="stylesheet" href="<c:url value="/css/custom.css"/>">
         </head>
         <body>
 
@@ -26,12 +26,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-        <c:if test="${activePage == 'menWorkout' or
-        activePage == 'start' or
-        activePage == 'mAbs' or
-        activePage == 'mArms' or
-        activePage == 'mLegs' or
-        activePage == 'mBack'}">
+        <c:if test="${activePage == 'womenWorkout' or activePage == 'start' or activePage == 'wAbs' or activePage == 'wArms' or activePage == 'wLegs' or activePage == 'wBack'}">
             <c:set var="userMenuActive">active</c:set>
         </c:if>
         <li class="nav-item ${userMenuActive} dropdown">
@@ -40,11 +35,11 @@
         Menu
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class ="dropdown-item" href="/menWorkout">Workout for Men</a>
-        <a class="dropdown-item" href="/mAbs">Ab Workout</a>
-        <a class="dropdown-item" href="/mArms">Arm Workout</a>
-        <a class="dropdown-item" href="/mLegs">Leg Workout</a>
-        <a class="dropdown-item" href="/mBack">Back Workout</a>
+        <a class ="dropdown-item" href="/womenWorkout">Workout for Women</a>
+        <a class="dropdown-item" href="/wAbs">Ab Workout</a>
+        <a class="dropdown-item" href="/wArms">Arm Workout</a>
+        <a class="dropdown-item" href="/wLegs">Leg Workout</a>
+        <a class="dropdown-item" href="/wBack">Back Workout</a>
 
         </div>
         </li>

@@ -8,7 +8,7 @@
 <%@taglib prefix="layout" tagdir="/WEB-INF/tags/layout" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
-<layout:page-container title="Fitness Programs" activePage="menWorkout">
+<layout:womenpage-container title="Fitness Programs" activePage="womenWorkout">
 
     <html>
     <head>
@@ -103,4 +103,4 @@
     </body>
     </html>
 
-</layout:page-container>
+</layout:womenpage-container>
