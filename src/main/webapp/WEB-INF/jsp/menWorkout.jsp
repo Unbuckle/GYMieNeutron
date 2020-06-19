@@ -1,4 +1,4 @@
-/<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -8,7 +8,7 @@
 <%@taglib prefix="layout" tagdir="/WEB-INF/tags/layout" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
-<layout:page-container title="Fitness Programs" activePage="menWorkout">
+<layout:menpage-container title="Fitness Programs" activePage="menWorkout">
 
     <html>
 <head>
@@ -27,7 +27,7 @@
 
         </div>
             <div class="scroll-container">
-        <a href="#" class ="scroll-btn">
+        <a href="#programs" class ="scroll-btn">
             <span></span>
             Scroll
         </a>
@@ -35,40 +35,72 @@
             <br/>
         </header>
 
-        <section id="choose-programs" class="program-list">
+        <section id="programs" class="program-list">
             <div class="br-line"></div>
-            <h2> text text text!</h2>
-
+            <h2> </h2>
             <div class="choose-programs">
-                <a href="/mAbs">
-                    <div class="program-card">
-                    <img src="<c:url value='./images/MAbs.jpg' />" alt="fitness" class="card-thumbnail">
-<%--                  <div class="overlay"><img src="images/overlay.png" alt="">--%>
-                    <div class="detail">
-                        <p class="title">The Way to get a Sixpack</p>
-                        </div><p class="more-details">
-                        <p class="more-details"><span>Equipment:</span> Fitness Mat</p>
-                    </div>
-                </a>
 
-<%--                <img src="<c:url value='./images/MAbs.jpg' />" alt="fitness" width="500" height="350"/>--%>
+                    <%-------------------------- ABS  ---------------------------%>
+                <a href="/mAbs">
+                    <div class ="each-program">
+                <div class="program-pic">
+                    <img src="<c:url value='./images/MAbs.jpg' />" alt="fitness" width="520px" height="400px" class="card-thumbnail">
+                </div>
+                    <div class="detail">
+                        <p class="title">Abs Workouts</p>
+                        <p class="equipments">
+                            <span>At Home Equipment: </span> &nbsp; Fitness Mat, Weights</p>
+                    </div>
+                </div>
+            </a>
+                            <%-------------------------- BACK  ---------------------------%>
+
+                        <a href="/mBack">
+                            <div class ="each-program">
+                                <div class="program-pic">
+                                    <img src="<c:url value='./images/MBack.jpg' />" alt="fitness" width="520px" height="400px" class="card-thumbnail">
+                                </div>
+                                <div class="detail">
+                                    <p class="title">Back Workouts</p>
+                                    <p class="equipments">
+                                        <span>At Home Equipment: </span> &nbsp; Fitness Mat, Pull Up Bar</p>
+                                </div>
+                            </div>
+                        </a>
+
+                    <%-------------------------- ARMS  ---------------------------%>
+                        <a href="/mArms">
+                            <div class ="each-program">
+                                <div class="program-pic">
+                                    <img src="<c:url value='./images/MArm.jpg' />" alt="fitness" width="520px" height="400px" class="card-thumbnail">
+                                </div>
+                                <div class="detail">
+                                    <p class="title">Arm Workouts</p>
+                                    <p class="equipments">
+                                        <span>At Home Equipment: </span> &nbsp; Fitness Mat, Dumbbells, Barbells </p>
+                                </div>
+                            </div>
+                        </a>
+                    <%-------------------------- LEGS  ---------------------------%>
+                        <a href="/mLeg">
+                            <div class ="each-program">
+                                <div class="program-pic">
+                                    <img src="<c:url value='./images/MLeg.jpg' />" alt="fitness" width="520px" height="400px" class="card-thumbnail">
+                                </div>
+                                <div class="detail">
+                                    <p class="title">Leg Workouts</p>
+                                    <p class="equipments">
+                                        <span>At Home Equipment: </span> &nbsp; Fitness Mat, Resistence Band</p>
+                                </div>
+                            </div>
+                        </a>
+
             </div>
 
         </section>
-
-
-        <%--<div class="col-md-10">
-            <select name="programs" class="form-control">
-                <option value="1"<c:if test="${user.programs.id == 1}"> selected</c:if>>Abs</option>
-                <option value="2"<c:if test="${user.programs.id == 2}"> selected</c:if>>Workout 2</option>
-                <option value="3"<c:if test="${user.programs.id == 3}"> selected</c:if>>Workout 3</option>
-            </select>
-        </div>--%>
-
-
 
     </div>
     </body>
 </html>
 
-</layout:page-container>
+</layout:menpage-container>

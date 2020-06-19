@@ -46,3 +46,38 @@ header .scroll-container. {
 .program-list .br-line{
     margin-bottom: 90px;
 }
+/*.program-list .choose-programs .program-card .detail {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: black;
+    padding: 0 20px 20px;
+}*/
+
+.program-list .choose-programs .each-program .program-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.program-list .choose-programs .each-program .detail .title{
+    font-size: 40px;
+    margin: 0;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.program-list .choose-programs .each-program .detail .equipments{
+    font-size: 20px;
+    margin: 0;
+    color: black;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+

@@ -1,19 +1,19 @@
     <%@ attribute name="title" required="true" %>
-	    <%@ attribute name="activePage" required="true" %>
+        <%@ attribute name="activePage" required="true" %>
         <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
         <%@taglib prefix="bootstrap" tagdir="/WEB-INF/tags/bootstrap" %>
         <%@taglib prefix="layout" tagdir="/WEB-INF/tags/layout" %>
-            <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+        <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 
-            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+        <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
         <html>
         <head>
         <bootstrap:bootstrap-metadata/>
         <title>${title}</title>
         <bootstrap:bootstrap-css/>
-            <link  rel="stylesheet" href="<c:url value="/css/custom.css"/>">
-            </head>
+        <link  rel="stylesheet" href="<c:url value="/css/custom.css"/>">
+        </head>
         <body>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -26,7 +26,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-        <c:if test="${activePage == 'listUser' or activePage == 'editUser' or activePage == 'menWorkout' or activePage == 'womenWorkout' or activePage == 'start'}">
+        <c:if test="${activePage == 'menWorkout' or activePage == 'womenWorkout' or activePage == 'start' or activePage == 'mAbs' or activePage == 'mArms' or activePage == 'mLegs' or activePage == 'mBack'}">
             <c:set var="userMenuActive">active</c:set>
         </c:if>
         <li class="nav-item ${userMenuActive} dropdown">
@@ -35,19 +35,20 @@
         Menu
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="/listUser">List User</a>
-        <a class="dropdown-item" href="/editUser">Edit User</a>
         <a class ="dropdown-item" href="/menWorkout">Workout for Men</a>
-        <a class ="dropdown-item" href="/womenWorkout">Workout for Women</a>
+        <a class="dropdown-item" href="/mAbs">Ab Workout</a>
+        <a class="dropdown-item" href="/mArms">Arm Workout</a>
+        <a class="dropdown-item" href="/mLegs">Leg Workout</a>
+        <a class="dropdown-item" href="/mBack">Back Workout</a>
 
         </div>
         </li>
         </ul>
-            Logged in as ${currentUser.username} |
-            <form:form method="post" action="/logout">
-                    <button class="btn btn-link" type="submit">Log Out</button>
-            </form:form>
-            </div>
+        Logged in as ${currentUser.username} |
+        <form:form method="post" action="/logout">
+            <button class="btn btn-link" type="submit">Log Out</button>
+        </form:form>
+        </div>
         </div>
         </nav>
 
@@ -80,6 +81,6 @@
         <jsp:doBody/>
         </div>
         <bootstrap:bootstrap-js/>
-            <script type="text/javascript" src="<c:url value="/js/custom.js"/>"></script>
-            </body>
+        <script type="text/javascript" src="<c:url value="/js/custom.js"/>"></script>
+        </body>
         </html>
