@@ -34,7 +34,9 @@ class User(
         @ManyToMany
         var programs: Set<Programs>? = null,
         @ManyToMany
-        var exercise: Set<Exercise>? = null
+        var exercise: Set<Exercise>? = null,
+        @ManyToMany(fetch = FetchType.EAGER)
+        var files: List<File>? = null
 
 ) : Comparable<User>, Serializable{
     override fun compareTo(other: User): Int {

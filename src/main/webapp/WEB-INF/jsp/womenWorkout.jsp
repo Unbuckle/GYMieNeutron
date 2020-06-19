@@ -82,7 +82,7 @@
                     </div>
                 </a>
                     <%-------------------------- LEGS  ---------------------------%>
-                <a href="/wLeg">
+                <a href="/wLegs">
                     <div class ="each-program">
                         <div class="program-pic">
                             <img src="<c:url value='./images/WLeg.jpg' />" alt="fitness" width="520px" height="400px" class="card-thumbnail">
