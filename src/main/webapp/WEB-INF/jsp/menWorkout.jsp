@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+/<%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -40,7 +40,7 @@
             <h2> text text text!</h2>
 
             <div class="choose-programs">
-                <a href="/womenWorkout">
+                <a href="/mAbs">
                     <div class="program-card">
                     <img src="<c:url value='./images/MAbs.jpg' />" alt="fitness" class="card-thumbnail">
 <%--                  <div class="overlay"><img src="images/overlay.png" alt="">--%>

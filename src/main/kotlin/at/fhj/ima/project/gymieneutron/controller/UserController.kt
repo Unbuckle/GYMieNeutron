@@ -105,5 +105,53 @@ class UserController (val userRepository: UserRepository,
         return "start"
     }
 
+    @RequestMapping ("/mAbs", method = [RequestMethod.GET])
+    fun mAbs (model: Model): String {
+        model.set("programs", programRepository.findAll())
+        return "mAbs"
+    }
+
+    @RequestMapping ("/mArms", method = [RequestMethod.GET])
+    fun mArms (model: Model): String {
+        model.set("programs", programRepository.findAll())
+        return "mArms"
+    }
+
+    @RequestMapping ("/mBack", method = [RequestMethod.GET])
+    fun mBack (model: Model): String {
+        model.set("programs", programRepository.findAll())
+        return "mBack"
+    }
+
+    @RequestMapping ("/mLegs", method = [RequestMethod.GET])
+    fun mLegs (model: Model): String {
+        model.set("programs", programRepository.findAll())
+        return "mLegs"
+    }
+
+    @RequestMapping ("/wAbs", method = [RequestMethod.GET])
+    fun wAbs (model: Model): String {
+        model.set("programs", programRepository.findAll())
+        return "wAbs"
+    }
+
+    @RequestMapping ("/wArms", method = [RequestMethod.GET])
+    fun wArms (model: Model): String {
+        model.set("programs", programRepository.findAll())
+        return "wArms"
+    }
+
+    @RequestMapping ("/wBack", method = [RequestMethod.GET])
+    fun wBack (model: Model): String {
+        model.set("programs", programRepository.findAll())
+        return "wBack"
+    }
+
+    @RequestMapping ("/wLegs", method = [RequestMethod.GET])
+    fun wLegs (model: Model): String {
+        model.set("programs", programRepository.findAll())
+        return "wLegs"
+    }
+
 }
 
