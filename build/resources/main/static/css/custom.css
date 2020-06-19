@@ -1,3 +1,44 @@
 body {
     background-color: white;
 }
+header .scroll-btn {
+    position: absolute;
+    bottom: 400px;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #000;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+}
+header .scroll-btn:hover {
+    opacity: .5;
+}
+header .scroll-btn {
+    padding-top: 55px;
+}
+header .scroll-btn span {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    text-align: center;
+    width: 18px;
+    height: 18px;
+    margin-left: -12px;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    box-sizing: border-box;
+    transform: rotate(-45deg);
+}
+
+header .header-title {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+header .scroll-container. {
+    padding-left: 45px;
+}

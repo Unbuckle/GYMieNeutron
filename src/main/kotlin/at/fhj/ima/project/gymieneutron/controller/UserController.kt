@@ -86,10 +86,23 @@ class UserController (val userRepository: UserRepository,
         return listUser(model, null)
     }
 
-    @RequestMapping("/listPrograms", method = [RequestMethod.GET])
-    fun listPrograms(model: Model): String {
+    @RequestMapping("/menWorkout", method = [RequestMethod.GET])
+    fun menWorkout(model: Model): String {
         model.set("programs", programRepository.findAll())
-        return "listPrograms"
+        return "menWorkout"
+    }
+
+    @RequestMapping("/womenWorkout", method = [RequestMethod.GET])
+    fun womenWorkout(model: Model): String {
+        model.set("programs", programRepository.findAll())
+        return "womenWorkout"
+    }
+
+
+    @RequestMapping ("/start", method = [RequestMethod.GET])
+    fun start (model: Model): String {
+        model.set("programs", programRepository.findAll())
+        return "start"
     }
 
 }

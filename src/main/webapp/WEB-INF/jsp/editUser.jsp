@@ -90,5 +90,5 @@
         </div>
     </div>
 
-    <bootstrap:bootstrap-js/>
+
 </layout:page-container>

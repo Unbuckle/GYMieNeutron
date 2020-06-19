@@ -26,18 +26,19 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-        <c:if test="${activePage == 'listUser' or activePage == 'editUser' or activePage == 'listPrograms'}">
+        <c:if test="${activePage == 'listUser' or activePage == 'editUser' or activePage == 'menWorkout' or activePage == 'womenWorkout' or activePage == 'start'}">
             <c:set var="userMenuActive">active</c:set>
         </c:if>
         <li class="nav-item ${userMenuActive} dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false">
-        User
+        Menu
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         <a class="dropdown-item" href="/listUser">List User</a>
         <a class="dropdown-item" href="/editUser">Edit User</a>
-        <a class ="dropdown-item" href="/listPrograms">List Programs</a>
+        <a class ="dropdown-item" href="/menWorkout">Workout for Men</a>
+        <a class ="dropdown-item" href="/womenWorkout">Workout for Women</a>
 
         </div>
         </li>
@@ -51,9 +52,9 @@
         </nav>
 
         <div class="container" role="main">
-        <div class="page-header">
+        <%--<div class="page-header">
         <h1>GYMie Neutron</h1>
-        </div>
+        </div>--%>
 
         <!-- Messages ----------------------------------------------------------- -->
 
