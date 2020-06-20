@@ -1,12 +1,9 @@
 package at.fhj.ima.project.gymieneutron.controller
 
-import at.fhj.ima.project.gymieneutron.dto.UserDto
 import at.fhj.ima.project.gymieneutron.entity.User
-import at.fhj.ima.project.gymieneutron.entity.UserRole
 import at.fhj.ima.project.gymieneutron.repository.ExerciseRepository
 import at.fhj.ima.project.gymieneutron.repository.ProgramRepository
 import at.fhj.ima.project.gymieneutron.repository.UserRepository
-import at.fhj.ima.project.gymieneutron.service.UserService
 import org.springframework.dao.DataIntegrityViolationException
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
@@ -25,8 +22,7 @@ import javax.validation.Valid
 @Controller
 class UserController (val userRepository: UserRepository,
                       val programRepository: ProgramRepository,
-                      val exerciseRepository: ExerciseRepository,
-                      val userService: UserService) {
+                      val exerciseRepository: ExerciseRepository ) {
 
     fun showEditUserView(model: Model): String {
         model.set("programs", programRepository.findAll())
@@ -96,44 +92,66 @@ class UserController (val userRepository: UserRepository,
         return "menWorkout"
     }
 
+    @RequestMapping("/mAbs", method = [RequestMethod.GET])
+    fun mAbs(model: Model): String {
+        model.set("exercise", exerciseRepository.findAll())
+        return "mAbs"
+    }
+
+    @RequestMapping("/mArms", method = [RequestMethod.GET])
+    fun mArms(model: Model): String {
+        model.set("exercise", exerciseRepository.findAll())
+        return "mArms"
+    }
+
+    @RequestMapping("/mBack", method = [RequestMethod.GET])
+    fun mBack(model: Model): String {
+        model.set("exercise", exerciseRepository.findAll())
+        return "mBack"
+    }
+
+    @RequestMapping("/mLegs", method = [RequestMethod.GET])
+    fun mLegs(model: Model): String {
+        model.set("exercise", exerciseRepository.findAll())
+        return "mLegs"
+    }
+
+
     @RequestMapping("/womenWorkout", method = [RequestMethod.GET])
     fun womenWorkout(model: Model): String {
         model.set("programs", programRepository.findAll())
         return "womenWorkout"
     }
 
+    @RequestMapping("/wAbs", method = [RequestMethod.GET])
+    fun wAbs(model: Model): String {
+        model.set("exercise", exerciseRepository.findAll())
+        return "wAbs"
+    }
+
+    @RequestMapping("/wArms", method = [RequestMethod.GET])
+    fun wArms(model: Model): String {
+        model.set("exercise", exerciseRepository.findAll())
+        return "wArms"
+    }
+
+    @RequestMapping("/wBack", method = [RequestMethod.GET])
+    fun wBack(model: Model): String {
+        model.set("exercise", exerciseRepository.findAll())
+        return "wBack"
+    }
+
+    @RequestMapping("/wLegs", method = [RequestMethod.GET])
+    fun wLegs(model: Model): String {
+        model.set("exercise", exerciseRepository.findAll())
+        return "wLegs"
+    }
 
     @RequestMapping ("/start", method = [RequestMethod.GET])
     fun start (model: Model): String {
         model.set("programs", programRepository.findAll())
         return "start"
     }
-
-    @RequestMapping ("/register" , method = [RequestMethod.GET])
-    fun register (model: Model): String{
-        val userdto: UserDto = UserDto()
-        model.set("userdto", userdto)
-        return "register"
-    }
-
-    @RequestMapping("/registerpost", method = [RequestMethod.POST])
-    fun registerpost(@ModelAttribute("userdto") @Valid user: UserDto, bindingResult: BindingResult, model: Model): String {
-        if (bindingResult.hasErrors()) {
-            return "/register"
-        }
-        try {
-            userService.save(user)
-        } catch (dive: DataIntegrityViolationException) {
-            if (dive.message.orEmpty().contains("username_UK")) {
-                bindingResult.rejectValue("username", "username.alreadyInUse", "Username already in use.");
-                return showEditUserView(model)
-            } else {
-                throw dive;
-            }
-        }
-        return "/start"
-    }
-
 
 }
 

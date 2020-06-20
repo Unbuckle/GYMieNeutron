@@ -3,7 +3,7 @@ body {
 }
 header .scroll-btn {
     position: absolute;
-    bottom: 350px;
+    bottom: 60%;
     left: 50%;
     z-index: 2;
     display: inline-block;
@@ -45,4 +45,37 @@ header .scroll-container. {
 
 .program-list .br-line{
     margin-bottom: 90px;
+}
+
+.program-list .choose-programs .each-program .program-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.program-list .choose-programs .each-program .detail .title{
+    font-size: 40px;
+    margin: 0;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.program-list .choose-programs .each-program .detail .equipments{
+    font-size: 20px;
+    margin: 0;
+    color: black;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.sep-line {
+    height: 1px;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #22263B;
 }

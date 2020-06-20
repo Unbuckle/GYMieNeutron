@@ -7,6 +7,7 @@
 <%@taglib prefix="bootstrap" tagdir="/WEB-INF/tags/bootstrap" %>
 <%@taglib prefix="layout" tagdir="/WEB-INF/tags/layout" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@taglib prefix="file" tagdir="/WEB-INF/tags/file" %>
 
 <layout:page-container title="User" activePage="editUser">
 
@@ -65,6 +66,14 @@
                     <div class="col-md-10">
                         <input class="form-control" id="inputEmail" type="text" name="email"
                                value="<c:out value="${user.email}"/>">
+                    </div>
+                </div>
+
+                <! ---------------- files ---------------- -->
+                <div class="form-group">
+                    <label for="inputDate" class="col-md-2 control-label">Files</label>
+                    <div class="col-md-10">
+                        <file:file path="files" value="${user.files}"/>
                     </div>
                 </div>
 

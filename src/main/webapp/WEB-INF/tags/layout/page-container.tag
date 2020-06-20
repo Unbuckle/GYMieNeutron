@@ -1,24 +1,31 @@
     <%@ attribute name="title" required="true" %>
-	    <%@ attribute name="activePage" required="true" %>
+        <%@ attribute name="activePage" required="true" %>
         <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
         <%@taglib prefix="bootstrap" tagdir="/WEB-INF/tags/bootstrap" %>
         <%@taglib prefix="layout" tagdir="/WEB-INF/tags/layout" %>
-            <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+        <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 
-            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+        <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
         <html>
         <head>
         <bootstrap:bootstrap-metadata/>
         <title>${title}</title>
         <bootstrap:bootstrap-css/>
-            <link  rel="stylesheet" href="<c:url value="/css/custom.css"/>">
-            </head>
+        <link rel="stylesheet" href="<c:url value="/css/custom.css"/>">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+
+
+        </head>
         <body>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container">
-        <a class="navbar-brand" href="/">GYMie Neutron</a>
+        <a class="navbar-brand" href="/">
+        <div class="logo-image">
+        <img src="/images/name.PNG" class="img-fluid" width="250px">
+        </div>
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -26,12 +33,25 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-        <c:if test="${activePage == 'listUser' or activePage == 'editUser' or activePage == 'menWorkout' or activePage == 'womenWorkout' or activePage == 'start'}">
+        <c:if test="${activePage == 'listUser' or
+        activePage == 'editUser' or
+        activePage == 'menWorkout' or
+        activePage == 'womenWorkout' or
+        activePage == 'start' or
+        activePage == 'mAbs' or
+        activePage == 'mArms' or
+        activePage == 'mBack' or
+        activePage == 'wLegs' or
+        activePage == 'wAbs' or
+        activePage == 'wArms' or
+        activePage == 'wBack' or
+        activePage == 'wLegs'}">
             <c:set var="userMenuActive">active</c:set>
         </c:if>
+
         <li class="nav-item ${userMenuActive} dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
+        aria-haspopup="true" aria-expanded="false" style="padding-top: 20px">
         Menu
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -40,14 +60,23 @@
         <a class ="dropdown-item" href="/menWorkout">Workout for Men</a>
         <a class ="dropdown-item" href="/womenWorkout">Workout for Women</a>
 
+
+        <%-- <ul>
+         <li><a href="/listUser">List User</a></li>
+         <li><a href="/editUser">Edit User</a></li>
+         <li><a href="/menWorkout">Workout for Men</a></li>
+         <li><a href="/womenWorkout">Workout for Women</a></li>
+         </ul>--%>
+
         </div>
         </li>
         </ul>
-            Logged in as ${currentUser.username} |
-            <form:form method="post" action="/logout">
-                    <button class="btn btn-link" type="submit">Log Out</button>
-            </form:form>
-            </div>
+
+        Logged in as ${currentUser.username} |
+        <form:form method="post" action="/logout">
+            <button class="btn btn-link" type="submit">Log Out</button>
+        </form:form>
+        </div>
         </div>
         </nav>
 
@@ -80,6 +109,6 @@
         <jsp:doBody/>
         </div>
         <bootstrap:bootstrap-js/>
-            <script type="text/javascript" src="<c:url value="/js/custom.js"/>"></script>
-            </body>
+        <script type="text/javascript" src="<c:url value="/js/custom.js"/>"></script>
+        </body>
         </html>
