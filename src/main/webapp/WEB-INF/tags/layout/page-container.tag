@@ -26,19 +26,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-        <c:if test="${activePage == 'listUser' or
-        activePage == 'editUser' or
-        activePage == 'menWorkout' or
-        activePage == 'womenWorkout' or
-        activePage == 'start' or
-        activePage == 'mAbs' or
-        activePage == 'mArms' or
-        activePage == 'mBack' or
-        activePage == 'wLegs' or
-        activePage == 'wAbs' or
-        activePage == 'wArms' or
-        activePage == 'wBack' or
-        activePage == 'wLegs'}">
+        <c:if test="${activePage == 'listUser' or activePage == 'editUser' or activePage == 'menWorkout' or activePage == 'womenWorkout' or activePage == 'start'}">
             <c:set var="userMenuActive">active</c:set>
         </c:if>
         <li class="nav-item ${userMenuActive} dropdown">

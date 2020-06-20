@@ -18,7 +18,7 @@ class User(
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         var id: Int? = null,
         @Enumerated(EnumType.STRING)
-        var role: UserRole? = null,
+        var role: UserRole = UserRole.ROLE_USER,
         @Column(nullable = false, unique = true)
         @field:NotNull()
         var username: String? = null,
@@ -34,9 +34,7 @@ class User(
         @ManyToMany
         var programs: Set<Programs>? = null,
         @ManyToMany
-        var exercise: Set<Exercise>? = null,
-        @ManyToMany(fetch = FetchType.EAGER)
-        var files: List<File>? = null
+        var exercise: Set<Exercise>? = null
 
 ) : Comparable<User>, Serializable{
     override fun compareTo(other: User): Int {
