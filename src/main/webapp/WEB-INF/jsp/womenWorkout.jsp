@@ -19,7 +19,6 @@
     <div class="form-group">
         <header>
             <div class="header-title">
-                <h2>Choose your Program</h2>
 
                 <div>
                     <img src="<c:url value='./images/slogan.PNG' />" alt="slogan" width="100%"/>
