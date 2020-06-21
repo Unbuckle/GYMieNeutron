@@ -1,6 +1,5 @@
 package at.fhj.ima.project.gymieneutron.controller
 
-
 import at.fhj.ima.project.gymieneutron.entity.File
 import at.fhj.ima.project.gymieneutron.service.FileService
 import org.springframework.core.io.FileSystemResource
@@ -11,7 +10,6 @@ import org.springframework.web.bind.annotation.*
 import org.springframework.web.multipart.MultipartFile
 import org.springframework.web.servlet.ModelAndView
 import javax.servlet.http.HttpServletRequest
-
 
 @Controller
 class FileController(val fileService: FileService) {
@@ -48,5 +46,4 @@ class FileController(val fileService: FileService) {
         mav.viewName = "error"
         return mav
     }
-
 }

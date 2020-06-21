@@ -15,14 +15,14 @@ import org.springframework.security.core.context.SecurityContextHolder
 
 @Service
 class BlogService(val blogRepository: BlogRepository,
-val userRepository: UserRepository) {
+                  val userRepository: UserRepository) {
     fun createNewBlog(): BlogDto {
         val newBlog = Blog()
         return convertEntityToDto(newBlog)
     }
 
     private fun convertEntityToDto(entity: Blog): BlogDto {
-        return BlogDto(entity.id,  entity.title, entity.infotxt, entity.user)
+        return BlogDto(entity.id, entity.title, entity.infotxt, entity.user)
     }
 
     @Transactional
@@ -35,7 +35,6 @@ val userRepository: UserRepository) {
 
     private fun convertDtoToEntity(dto: BlogDto): Blog {
 
-        // logic that prevents specific roles/users from editing certain attributes could be added here
         val auth = SecurityContextHolder.getContext().authentication.name
         val user = userRepository.findByUsername(auth)
 
@@ -43,16 +42,10 @@ val userRepository: UserRepository) {
         blog.id = dto.id
         blog.title = dto.title
         blog.infotxt = dto.infotxt
+        blog.files = dto.files?.filter { x -> x.id != null }
         blog.user = user
         return blog
     }
 
-    /*fun findByFirstnameOrLastname(search: String): List<User> {
-        return userRepository.findByFirstnameOrLastname(search)
-    }
-
-    fun findAll(): List<User> {
-        return userRepository.findAll()
-    }*/
 
 }

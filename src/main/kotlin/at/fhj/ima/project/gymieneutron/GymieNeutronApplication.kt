@@ -14,26 +14,26 @@ import org.springframework.web.servlet.resource.ResourceUrlEncodingFilter
 @SpringBootApplication
 @EnableGlobalMethodSecurity(securedEnabled = true)
 class GymieNeutronApplication : SpringBootServletInitializer() {
-	override fun configure(application: SpringApplicationBuilder): SpringApplicationBuilder {
-		return application.sources(GymieNeutronApplication::class.java)
-	}
+    override fun configure(application: SpringApplicationBuilder): SpringApplicationBuilder {
+        return application.sources(GymieNeutronApplication::class.java)
+    }
 
 
-	@Bean
-	fun resourceUrlEncodingFilterRegistration(): FilterRegistrationBean<ResourceUrlEncodingFilter> {
-		val registration = FilterRegistrationBean<ResourceUrlEncodingFilter>()
-		registration.setFilter(ResourceUrlEncodingFilter())
-		registration.addUrlPatterns("/*")
-		registration.setName("resourceUrlEncodingFilter")
-		return registration
-	}
+    @Bean
+    fun resourceUrlEncodingFilterRegistration(): FilterRegistrationBean<ResourceUrlEncodingFilter> {
+        val registration = FilterRegistrationBean<ResourceUrlEncodingFilter>()
+        registration.setFilter(ResourceUrlEncodingFilter())
+        registration.addUrlPatterns("/*")
+        registration.setName("resourceUrlEncodingFilter")
+        return registration
+    }
 
-	@Bean
-	fun passwordEncoder(): PasswordEncoder {
-		return BCryptPasswordEncoder();
-	}
+    @Bean
+    fun passwordEncoder(): PasswordEncoder {
+        return BCryptPasswordEncoder();
+    }
 }
 
 fun main(args: Array<String>) {
-	runApplication<GymieNeutronApplication>(*args)
+    runApplication<GymieNeutronApplication>(*args)
 }

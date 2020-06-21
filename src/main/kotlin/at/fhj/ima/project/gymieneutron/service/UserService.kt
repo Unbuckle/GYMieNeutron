@@ -17,22 +17,22 @@ class UserService(val userRepository: UserRepository) {
         return convertEntityToDto(newUser)
     }
 
+    fun findByUsername(username: String): UserDto {
+        return convertEntityToDto(userRepository.findByUsername(username))
+    }
+
     private fun convertEntityToDto(entity: User): UserDto {
-        return UserDto(entity.id,  entity.username, entity.password,
-                entity.firstName, entity.lastName, entity.dayOfBirth, entity.email, entity.blog)
+        return UserDto(entity.id, entity.username, entity.password,
+                entity.firstName, entity.lastName, entity.dayOfBirth, entity.email)
     }
 
     @Transactional
     fun save(dto: UserDto) {
-
         val user = convertDtoToEntity(dto)
-
         userRepository.save(user)
     }
 
     private fun convertDtoToEntity(dto: UserDto): User {
-
-        // logic that prevents specific roles/users from editing certain attributes could be added here
 
         val user = User()
         user.id = dto.id
@@ -43,7 +43,6 @@ class UserService(val userRepository: UserRepository) {
         user.lastName = dto.lastName
         user.dayOfBirth = dto.dayOfBirth
         user.email = dto.email
-        user.blog = dto.blog
         return user
     }
 
@@ -55,4 +54,7 @@ class UserService(val userRepository: UserRepository) {
         return userRepository.findAll()
     }
 
+    fun delete(username: String) {
+        userRepository.delete(userRepository.findByUsername(username))
+    }
 }

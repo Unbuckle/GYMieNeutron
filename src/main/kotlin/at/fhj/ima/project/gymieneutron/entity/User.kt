@@ -1,4 +1,5 @@
 package at.fhj.ima.project.gymieneutron.entity
+
 import com.sun.istack.NotNull
 import java.io.Serializable
 import java.time.LocalDate
@@ -41,7 +42,7 @@ class User(
         var blog: List<Blog>? = null
 
 
-) : Comparable<User>, Serializable{
+) : Comparable<User>, Serializable {
     override fun compareTo(other: User): Int {
         return compareValues(username, other.username)
     }

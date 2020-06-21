@@ -7,7 +7,6 @@
 <%@taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@taglib prefix="file" tagdir="/WEB-INF/tags/file" %>
-
 <table role="presentation" class="table table-striped">
     <tbody class="filescontainer">
     <c:forEach var="file" items="${value}" varStatus="status">
@@ -26,7 +25,6 @@
     </c:forEach>
     </tbody>
 </table>
-
 <input type="file" multiple="true" class="customfileupload form-control"
        data-path="${path}" data-csrftokenname="${_csrf.parameterName}" data-csrftoken="${_csrf.token}"/>
 <form:errors path="${path}" cssClass="invalid-feedback d-block"/>

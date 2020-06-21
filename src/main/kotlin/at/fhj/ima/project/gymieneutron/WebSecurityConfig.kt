@@ -10,20 +10,20 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @Configuration
 @EnableWebSecurity
 class WebSecurityConfig : WebSecurityConfigurerAdapter() {
-
     @Autowired
     private lateinit var myUserDetailsService: MyUserDetailsService;
-
     override fun configure(http: HttpSecurity) {
         http
                 .authorizeRequests()
                 .antMatchers("/register").permitAll()
                 .antMatchers("/registerpost").permitAll()
+                .antMatchers("/start").permitAll()
+                .antMatchers("/menWorkout").permitAll()
+                .antMatchers("/womenWorkout").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
                 .and()
                 .rememberMe().userDetailsService(myUserDetailsService);
     }
-
 }

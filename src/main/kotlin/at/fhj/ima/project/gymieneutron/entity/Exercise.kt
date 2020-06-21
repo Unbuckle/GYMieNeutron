@@ -12,9 +12,6 @@ class Exercise(
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         var id: Int? = null,
         var name: String? = null,
-        var bodypart: String? = null,
-        var man: Boolean? = null,
-        var woman: Boolean?= null,
         var level: String? = null,
         var reps: Int? = null,
         var equipment: String? = null,

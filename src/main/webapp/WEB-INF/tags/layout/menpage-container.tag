@@ -13,16 +13,16 @@
         <title>${title}</title>
         <bootstrap:bootstrap-css/>
         <link rel="stylesheet" href="<c:url value="/css/custom.css"/>">
-            <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
         </head>
         <body>
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container">
         <a class="navbar-brand" href="/start">
-            <div class="logo-image">
-            <img src="/images/name.PNG" class="img-fluid" width="250px">
-            </div></a>
+        <div class="logo-image">
+        <img src="/images/name.PNG" class="img-fluid" width="250px">
+        </div></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -49,14 +49,26 @@
         <a class="dropdown-item" href="/mArms">Arm Workout</a>
         <a class="dropdown-item" href="/mLegs">Leg Workout</a>
         <a class="dropdown-item" href="/mBack">Back Workout</a>
+        <a class ="dropdown-item" href="/blog">Blog</a>
+
 
         </div>
         </li>
         </ul>
-        Logged in as ${currentUser.username} |
-        <form:form method="post" action="/logout">
-            <button class="btn btn-link" type="submit">Log Out</button>
-        </form:form>
+        <c:if test="${currentUser == null}">You are not logged in |
+            <form:form method="get" action="/register">
+                <button class="btn btn-link" type="submit">Sign up</button>
+            </form:form>
+            <form:form method="get" action="/">
+                <button class="btn btn-link" type="submit">Login</button>
+            </form:form>
+        </c:if>
+
+        <c:if test="${currentUser != null}">Logged in as ${currentUser.username} |
+            <form:form method="post" action="/logout">
+                <button class="btn btn-link" type="submit">Log Out</button>
+            </form:form>
+        </c:if>
         </div>
         </div>
         </nav>

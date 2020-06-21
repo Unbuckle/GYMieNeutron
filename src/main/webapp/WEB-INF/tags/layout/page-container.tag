@@ -63,31 +63,33 @@
         <a class="dropdown-item" href="/editUser">Edit User</a>
         <a class ="dropdown-item" href="/menWorkout">Workout for Men</a>
         <a class ="dropdown-item" href="/womenWorkout">Workout for Women</a>
+        <a class ="dropdown-item" href="/blog">Blog</a>
 
-
-        <%-- <ul>
-         <li><a href="/listUser">List User</a></li>
-         <li><a href="/editUser">Edit User</a></li>
-         <li><a href="/menWorkout">Workout for Men</a></li>
-         <li><a href="/womenWorkout">Workout for Women</a></li>
-         </ul>--%>
 
         </div>
         </li>
         </ul>
 
-        Logged in as ${currentUser.username} |
-        <form:form method="post" action="/logout">
-            <button class="btn btn-link" type="submit">Log Out</button>
-        </form:form>
+        <c:if test="${currentUser == null}">You are not logged in |
+            <form:form method="get" action="/register">
+                <button class="btn btn-link" type="submit">Sign up</button>
+            </form:form>
+            <form:form method="get" action="/">
+                <button class="btn btn-link" type="submit">Login</button>
+            </form:form>
+        </c:if>
+
+        <c:if test="${currentUser != null}">Logged in as ${currentUser.username} |
+            <form:form method="post" action="/logout">
+                <button class="btn btn-link" type="submit">Log Out</button>
+            </form:form>
+        </c:if>
         </div>
         </div>
         </nav>
 
         <div class="container" role="main">
-        <%--<div class="page-header">
-        <h1>GYMie Neutron</h1>
-        </div>--%>
+
 
         <!-- Messages ----------------------------------------------------------- -->
 
@@ -113,6 +115,14 @@
         <jsp:doBody/>
         </div>
         <bootstrap:bootstrap-js/>
+        <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+        <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.iframe-transport/1.0.1/jquery.iframe-transport.min.js"></script>
+        <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-file-upload/10.28.0/js/jquery.fileupload.min.js"></script>
         <script type="text/javascript" src="<c:url value="/js/custom.js"/>"></script>
         </body>
         </html>

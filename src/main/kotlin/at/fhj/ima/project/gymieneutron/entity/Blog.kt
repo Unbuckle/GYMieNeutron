@@ -4,31 +4,33 @@ import javax.persistence.*
 
 
 @Entity
-class Blog (
-            @Id
-            @GeneratedValue(strategy = GenerationType.IDENTITY)
-            var id: Int? = null,
-            var title: String? = null,
-            var infotxt: String? = null,
+class Blog(
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        var id: Int? = null,
+        var title: String? = null,
+        var infotxt: String? = null,
 
-            @ManyToOne
-            var user: User? = null
+        @ManyToOne
+        var user: User? = null,
+        @ManyToMany(fetch = FetchType.EAGER)
+        var files: List<File>? = null
 
-    ) : Comparable<Exercise> {
-        override fun compareTo(other: Exercise): Int {
-            return compareValues(id, other.id)
-        }
-
-        override fun equals(other: Any?): Boolean {
-            if (this === other) return true
-            if (javaClass != other?.javaClass) return false
-            other as Exercise
-            if (id != other.id) return false
-            return true
-        }
-
-        override fun hashCode(): Int {
-            return id.hashCode()
-        }
+) : Comparable<Exercise> {
+    override fun compareTo(other: Exercise): Int {
+        return compareValues(id, other.id)
     }
+
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+        other as Exercise
+        if (id != other.id) return false
+        return true
+    }
+
+    override fun hashCode(): Int {
+        return id.hashCode()
+    }
+}
 

@@ -36,7 +36,6 @@ class BlogController(val userRepository: UserRepository,
                      val blogService: BlogService) {
 
 
-    // ----------------------------------------- test blog
     @RequestMapping("/blog", method = [RequestMethod.GET])
     fun blog(model: Model, @RequestParam(required = false) id: Int?): String {
         model.set("blogdto", blogService.createNewBlog())
@@ -44,13 +43,15 @@ class BlogController(val userRepository: UserRepository,
     }
 
     @RequestMapping("/editBlog", method = [RequestMethod.POST])
-    fun editBlog(@ModelAttribute("blog") @Valid blog: BlogDto,
+    fun editBlog(@ModelAttribute("blogdto") @Valid blogdto: BlogDto?,
                  bindingResult: BindingResult, model: Model): String {
         if (bindingResult.hasErrors()) {
             return "blog"
         }
         try {
-            blogService.save(blog)
+            if (blogdto != null) {
+                blogService.save(blogdto)
+            }
         } catch (dive: DataIntegrityViolationException) {
             if (dive.message.orEmpty().contains("constraint [username_UK]")) {
                 bindingResult.rejectValue("id", "username.alreadyInUse", "Username already in use.");

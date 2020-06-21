@@ -1,6 +1,7 @@
 package at.fhj.ima.project.gymieneutron.dto
 
 import at.fhj.ima.project.gymieneutron.entity.Blog
+import at.fhj.ima.project.gymieneutron.entity.File
 import at.fhj.ima.project.gymieneutron.entity.User
 import java.io.Serializable
 
@@ -8,7 +9,8 @@ class BlogDto(
         var id: Int? = null,
         var title: String? = null,
         var infotxt: String? = null,
-        var user: User? = null
+        var user: User? = null,
+        var files: List<File>? = null
 
 ) : Comparable<Blog>, Serializable {
     override fun compareTo(other: Blog): Int {

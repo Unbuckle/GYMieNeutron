@@ -20,11 +20,11 @@
     <body>
 
     <style>
-        body{
+        body {
             background-image: url('/images/logo.PNG');
             background-repeat: no-repeat;
             background-position: 50% 20%;
-            background-size: 40% ;
+            background-size: 40%;
 
         }
     </style>
@@ -33,12 +33,13 @@
 
         <div class="row">
 
-            <div class="col-lg-8 mt-4 mb-5" style="text-align: center; padding-top: 60%; padding-left: 34%">
+            <div class="col-lg-8 mt-4 mb-5" style="text-align: center; padding-top: 30%; padding-left: 34%">
                 <h1> Choose one option </h1>
 
             </div>
         </div>
-        <div class="col-lg-8 d-flex justify-content-center mt-5" style="width: 100%; margin-top: 15%; padding-left: 31%; text-align:center">
+        <div class="col-lg-8 d-flex justify-content-center mt-5"
+             style="width: 100%; margin-top: 15%; padding-left: 31%; text-align:center">
             <div>
                 <ul>
                     <a href="menWorkout" class="btn btn-outline-dark btn-lg" style="width: 200px">Men</a>
