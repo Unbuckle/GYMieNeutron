@@ -1,9 +1,6 @@
 package at.fhj.ima.project.gymieneutron.dto
 
-import at.fhj.ima.project.gymieneutron.entity.User
-import at.fhj.ima.project.gymieneutron.entity.Exercise
-import at.fhj.ima.project.gymieneutron.entity.Programs
-import at.fhj.ima.project.gymieneutron.entity.UserRole
+import at.fhj.ima.project.gymieneutron.entity.*
 import org.springframework.http.StreamingHttpOutputMessage
 import java.io.Serializable
 import java.time.LocalDate
@@ -22,7 +19,8 @@ class UserDto(
         var lastName: String? = null,
         @field:Past
         var dayOfBirth: LocalDate? = null,
-        var email: String? = null
+        var email: String? = null,
+        var files: List<File>? = null
 ) : Comparable<User>, Serializable {
     override fun compareTo(other: User): Int {
         return compareValues(id, other.id)
