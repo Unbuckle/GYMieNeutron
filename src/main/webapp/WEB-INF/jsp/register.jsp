@@ -8,7 +8,7 @@
 <%@taglib prefix="layout" tagdir="/WEB-INF/tags/layout" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
-<layout:page-container title="User" activePage="register">
+<layout:page-container title="Sign Up" activePage="register">
 
     <div class="row">
         <div class="col-md-8 col-md-offset-2">

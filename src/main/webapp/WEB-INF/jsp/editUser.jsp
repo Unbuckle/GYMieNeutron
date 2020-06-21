@@ -9,7 +9,7 @@
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@taglib prefix="file" tagdir="/WEB-INF/tags/file" %>
 
-<layout:page-container title="User" activePage="editUser">
+<layout:page-container title="Profile" activePage="editUser">
 
     <div class="row">
         <div class="col-md-8 col-md-offset-2">

@@ -7,7 +7,7 @@
 <%@taglib prefix="layout" tagdir="/WEB-INF/tags/layout" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
-<layout:womenpage-container title="Fitness Programs" activePage="wLeg">
+<layout:womenpage-container title="Leg Workout" activePage="wLeg">
 
     <html>
     <head>
