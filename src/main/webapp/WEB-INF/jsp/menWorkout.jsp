@@ -11,26 +11,26 @@
 <layout:menpage-container title="Fitness Programs" activePage="menWorkout">
 
     <html>
-    <head>
-        <title>Fitness Programs</title>
-    </head>
+<head>
+    <title>Fitness Programs</title>
+</head>
     <body>
 
     <div class="form-group">
         <header>
-            <div class="header-title">
+        <div class="header-title">
 
 
-                <div>
-                    <img src="<c:url value='./images/slogan.PNG' />" alt="slogan" width="100%"/>
-                </div>
-
+            <div>
+                <img src="<c:url value='./images/slogan.PNG' />" alt="slogan" width="100%"/>
             </div>
+
+        </div>
             <div class="scroll-container">
-                <a href="#programs" class="scroll-btn">
-                    <span></span>
-                    Scroll
-                </a>
+        <a href="#programs" class ="scroll-btn">
+            <span></span>
+            Scroll
+        </a>
             </div>
             <br/>
 
@@ -39,67 +39,63 @@
 
         <section id="programs" class="program-list">
             <div class="br-line"></div>
-            <h2></h2>
+            <h2> </h2>
             <div class="choose-programs">
 
                     <%-------------------------- ABS  ---------------------------%>
                 <a href="/mAbs">
-                    <div class="each-program">
-                        <div class="program-pic">
-                            <img src="<c:url value='./images/MAbs.jpg' />" alt="fitness" width="520px" height="400px"
-                                 class="card-thumbnail">
-                        </div>
-                        <div class="detail">
-                            <p class="title">Abs Workouts</p>
-                            <p class="equipments">
-                                <span>At Home Equipment: </span> &nbsp; Fitness Mat, Weights</p>
-                        </div>
+                    <div class ="each-program">
+                <div class="program-pic">
+                    <img src="<c:url value='./images/MAbs.jpg' />" alt="fitness" width="520px" height="400px" class="card-thumbnail">
+                </div>
+                    <div class="detail">
+                        <p class="title">Abs Workouts</p>
+                        <p class="equipments">
+                            <span>At Home Equipment: </span> &nbsp; Fitness Mat, Weights</p>
                     </div>
-                </a>
-                    <%-------------------------- BACK  ---------------------------%>
+                </div>
+            </a>
+                            <%-------------------------- BACK  ---------------------------%>
 
-                <a href="/mBack">
-                    <div class="each-program">
-                        <div class="program-pic">
-                            <img src="<c:url value='./images/MBack.jpg' />" alt="fitness" width="520px" height="400px"
-                                 class="card-thumbnail">
-                        </div>
-                        <div class="detail">
-                            <p class="title">Back Workouts</p>
-                            <p class="equipments">
-                                <span>At Home Equipment: </span> &nbsp; Fitness Mat, Pull Up Bar</p>
-                        </div>
-                    </div>
-                </a>
+                        <a href="/mBack">
+                            <div class ="each-program">
+                                <div class="program-pic">
+                                    <img src="<c:url value='./images/MBack.jpg' />" alt="fitness" width="520px" height="400px" class="card-thumbnail">
+                                </div>
+                                <div class="detail">
+                                    <p class="title">Back Workouts</p>
+                                    <p class="equipments">
+                                        <span>At Home Equipment: </span> &nbsp; Fitness Mat, Pull Up Bar</p>
+                                </div>
+                            </div>
+                        </a>
 
                     <%-------------------------- ARMS  ---------------------------%>
-                <a href="/mArms">
-                    <div class="each-program">
-                        <div class="program-pic">
-                            <img src="<c:url value='./images/MArm.jpg' />" alt="fitness" width="520px" height="400px"
-                                 class="card-thumbnail">
-                        </div>
-                        <div class="detail">
-                            <p class="title">Arm Workouts</p>
-                            <p class="equipments">
-                                <span>At Home Equipment: </span> &nbsp; Fitness Mat, Dumbbells, Barbells </p>
-                        </div>
-                    </div>
-                </a>
+                        <a href="/mArms">
+                            <div class ="each-program">
+                                <div class="program-pic">
+                                    <img src="<c:url value='./images/MArm.jpg' />" alt="fitness" width="520px" height="400px" class="card-thumbnail">
+                                </div>
+                                <div class="detail">
+                                    <p class="title">Arm Workouts</p>
+                                    <p class="equipments">
+                                        <span>At Home Equipment: </span> &nbsp; Fitness Mat, Dumbbells, Barbells </p>
+                                </div>
+                            </div>
+                        </a>
                     <%-------------------------- LEGS  ---------------------------%>
-                <a href="/mLegs">
-                    <div class="each-program">
-                        <div class="program-pic">
-                            <img src="<c:url value='./images/MLeg.jpg' />" alt="fitness" width="520px" height="400px"
-                                 class="card-thumbnail">
-                        </div>
-                        <div class="detail">
-                            <p class="title">Leg Workouts</p>
-                            <p class="equipments">
-                                <span>At Home Equipment: </span> &nbsp; Fitness Mat, Resistence Band</p>
-                        </div>
-                    </div>
-                </a>
+                        <a href="/mLegs">
+                            <div class ="each-program">
+                                <div class="program-pic">
+                                    <img src="<c:url value='./images/MLeg.jpg' />" alt="fitness" width="520px" height="400px" class="card-thumbnail">
+                                </div>
+                                <div class="detail">
+                                    <p class="title">Leg Workouts</p>
+                                    <p class="equipments">
+                                        <span>At Home Equipment: </span> &nbsp; Fitness Mat, Resistence Band</p>
+                                </div>
+                            </div>
+                        </a>
 
             </div>
 
@@ -107,6 +103,6 @@
 
     </div>
     </body>
-    </html>
+</html>
 
 </layout:menpage-container>

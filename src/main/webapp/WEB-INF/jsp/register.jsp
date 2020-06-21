@@ -13,8 +13,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
                 <%--@elvariable id="user" type="at.fhj.ima.project.gymieneutron.entity.User"--%>
-            <form:form modelAttribute="userdto" class="needs-validation form-horizonal" method="post"
-                       action="registerpost"
+            <form:form modelAttribute="userdto" class="needs-validation form-horizonal" method="post" action="registerpost"
                        novalidate="novalidate">
                 <input type="hidden" name="id" value=""/>
                 <fieldset>
@@ -34,8 +33,7 @@
                     <div class="form-group">
                         <label id="inputPassword" for="inputPassword" class="col-md-2 control-label">Password*</label>
                         <div class="col-md-10">
-                            <form:input id="inputPassword" path="password" type="password" class="form-control"
-                                        required="required"/>
+                            <form:input id="inputPassword" path="password" type="password" class="form-control" required="required"/>
                             <form:errors path="password" cssClass="invalid-feedback d-block"/>
                         </div>
                     </div>
@@ -53,8 +51,7 @@
                     <div class="form-group">
                         <label for="inputFirstName" class="col-md-2 control-label">First Name*</label>
                         <div class="col-md-10">
-                            <form:input id="inputFirstName" path="firstName" type="text" class="form-control"
-                                        required="required"/>
+                            <form:input id="inputFirstName" path="firstName" type="text" class="form-control" required="required"/>
                             <form:errors path="firstName" cssClass="invalid-feedback d-block"/>
                         </div>
                     </div>
@@ -63,8 +60,7 @@
                     <div class="form-group">
                         <label for="inputLastName" class="col-md-2 control-label">Last Name*</label>
                         <div class="col-md-10">
-                            <form:input id="inputLastName" path="lastName" type="text" class="form-control"
-                                        required="required"/>
+                            <form:input id="inputLastName" path="lastName" type="text" class="form-control" required="required"/>
                             <form:errors path="lastName" cssClass="invalid-feedback d-block"/>
                         </div>
                     </div>
@@ -73,8 +69,7 @@
                     <div class="form-group">
                         <label for="inputDate" class="col-md-2 control-label">Date*</label>
                         <div class="col-md-10">
-                            <form:input id="inputDate" path="dayOfBirth" type="date" class="form-control"
-                                        required="required"/>
+                            <form:input id="inputDate" path="dayOfBirth" type="date" class="form-control" required="required"/>
                             <form:errors path="dayOfBirth" cssClass="invalid-feedback d-block"/>
                         </div>
                     </div>
@@ -83,8 +78,7 @@
                     <div class="from-group">
                         <label for="inputEmail" class="col-md-2 control-label">Email</label>
                         <div class="col-md-10">
-                            <form:input id="inputEmail" path="email" type="mail" class="form-control"
-                                        required="required"/>
+                            <form:input id="inputEmail" path="email" type="mail" class="form-control" required="required"/>
                             <form:errors path="email" cssClass="invalid-feedback d-block"/>
                         </div>
                     </div>
@@ -97,8 +91,7 @@
                         </div>
                     </div>
 
-                    <script type="text/javascript"
-                            src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+                    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
                     <script type="text/javascript">
                         $(function () {
                             $("#btnSubmit").click(function () {

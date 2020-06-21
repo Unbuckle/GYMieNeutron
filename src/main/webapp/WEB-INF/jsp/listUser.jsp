@@ -83,7 +83,7 @@
                     <th data-sortable="true">E-Mail</th>
                     <th data-sortable="true">Edit</th>
                     <sec:authorize access="hasAuthority('ROLE_ADMIN')">
-                        <th data-sortable="true">Delete</th>
+                    <th data-sortable="true">Delete</th>
                     </sec:authorize>
 
                 </tr>
@@ -130,7 +130,7 @@
                         </td>
                     </tr>
                 </c:forEach>
-
+                <!--  list all employees ----------------------------------------------------------- -->
                 </tbody>
             </table>
         </div>

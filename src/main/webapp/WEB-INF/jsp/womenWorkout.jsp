@@ -26,7 +26,7 @@
 
             </div>
             <div class="scroll-container">
-                <a href="#programs" class="scroll-btn">
+                <a href="#programs" class ="scroll-btn">
                     <span></span>
                     Scroll
                 </a>
@@ -36,15 +36,14 @@
 
         <section id="programs" class="program-list">
             <div class="br-line"></div>
-            <h2></h2>
+            <h2> </h2>
             <div class="choose-programs">
 
                     <%-------------------------- ABS  ---------------------------%>
                 <a href="/wAbs">
-                    <div class="each-program">
+                    <div class ="each-program">
                         <div class="program-pic">
-                            <img src="<c:url value='./images/WAbs.jpg' />" alt="fitness" width="520px" height="400px"
-                                 class="card-thumbnail">
+                            <img src="<c:url value='./images/WAbs.jpg' />" alt="fitness" width="520px" height="400px" class="card-thumbnail">
                         </div>
                         <div class="detail">
                             <p class="title">Abs Workouts</p>
@@ -56,10 +55,9 @@
                     <%-------------------------- BACK  ---------------------------%>
 
                 <a href="/wBack">
-                    <div class="each-program">
+                    <div class ="each-program">
                         <div class="program-pic">
-                            <img src="<c:url value='./images/WBack.jpg' />" alt="fitness" width="520px" height="400px"
-                                 class="card-thumbnail">
+                            <img src="<c:url value='./images/WBack.jpg' />" alt="fitness" width="520px" height="400px" class="card-thumbnail">
                         </div>
                         <div class="detail">
                             <p class="title">Back Workouts</p>
@@ -71,10 +69,9 @@
 
                     <%-------------------------- ARMS  ---------------------------%>
                 <a href="/wArms">
-                    <div class="each-program">
+                    <div class ="each-program">
                         <div class="program-pic">
-                            <img src="<c:url value='./images/WArm.jpg' />" alt="fitness" width="580px" height="400px"
-                                 class="card-thumbnail">
+                            <img src="<c:url value='./images/WArm.jpg' />" alt="fitness" width="580px" height="400px" class="card-thumbnail">
                         </div>
                         <div class="detail">
                             <p class="title">Arm Workouts</p>
@@ -85,10 +82,9 @@
                 </a>
                     <%-------------------------- LEGS  ---------------------------%>
                 <a href="/wLegs">
-                    <div class="each-program">
+                    <div class ="each-program">
                         <div class="program-pic">
-                            <img src="<c:url value='./images/WLeg.jpg' />" alt="fitness" width="520px" height="400px"
-                                 class="card-thumbnail">
+                            <img src="<c:url value='./images/WLeg.jpg' />" alt="fitness" width="520px" height="400px" class="card-thumbnail">
                         </div>
                         <div class="detail">
                             <p class="title">Leg Workouts</p>

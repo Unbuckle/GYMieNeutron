@@ -16,7 +16,7 @@
                 <%--@elvariable id="blogdto" type="at.fhj.ima.project.gymieneutron.dto.BlogDto"--%>
             <form:form modelAttribute="blogdto" class="needs-validation form-horizonal" method="post" action="editBlog"
                        novalidate="novalidate">
-                <input type="hidden" path="id" name="id"/>
+              <input type="hidden" path="id" name="id"/>
                 <input type="hidden" path="user" name="user"/>
                 <fieldset>
                     <! ---------------- title ---------------- -->
@@ -58,10 +58,10 @@
         </div>
     </div>
 
-    <div class="row">
+   <div class="row">
         <div class="col-md-10 col-md-offset-1">
 
-            <table data-toggle="table" class="table table-striped">
+            <table data-toggle="table" class="table table-striped" >
                 <thead>
                 <tr>
                     <th>Title</th>

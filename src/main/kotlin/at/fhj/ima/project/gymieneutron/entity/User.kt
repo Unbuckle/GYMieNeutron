@@ -36,8 +36,8 @@ class User(
         var programs: Set<Programs>? = null,
         @ManyToMany
         var exercise: Set<Exercise>? = null,
-        @ManyToMany(fetch = FetchType.EAGER)
-        var files: List<File>? = null,
+//        @ManyToMany(fetch = FetchType.EAGER)
+//        var files: List<File>? = null,
         @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
         var blog: List<Blog>? = null
 

@@ -1,11 +1,9 @@
 body {
     background-color: white;
-
-    /* --------------------------------------- test blog ---------------------------------- */
-
     padding: 20px;
 
 }
+
 header .scroll-btn {
     position: absolute;
     bottom: 60%;
@@ -19,12 +17,15 @@ header .scroll-btn {
     text-decoration: none;
     transition: opacity .3s;
 }
+
 header .scroll-btn:hover {
     opacity: .5;
 }
+
 header .scroll-btn {
     padding-top: 55px;
 }
+
 header .scroll-btn span {
     position: absolute;
     left: 50%;
@@ -48,7 +49,7 @@ header .scroll-container. {
     padding-left: 45px;
 }
 
-.program-list .br-line{
+.program-list .br-line {
     margin-bottom: 90px;
 }
 
@@ -58,7 +59,7 @@ header .scroll-container. {
     align-items: center;
 }
 
-.program-list .choose-programs .each-program .detail .title{
+.program-list .choose-programs .each-program .detail .title {
     font-size: 40px;
     margin: 0;
     color: black;
@@ -68,7 +69,7 @@ header .scroll-container. {
     align-items: center;
 }
 
-.program-list .choose-programs .each-program .detail .equipments{
+.program-list .choose-programs .each-program .detail .equipments {
     font-size: 20px;
     margin: 0;
     color: black;
@@ -78,68 +79,10 @@ header .scroll-container. {
     align-items: center;
     margin-bottom: 2rem;
 }
+
 .sep-line {
     height: 1px;
     width: 100%;
     margin-bottom: 20px;
     background-color: #22263B;
-}
-
-/* --------------------------------------------------------- test blog ----------------------------------------------- */
-.header {
-    padding: 30px;
-    font-size: 40px;
-    text-align: center;
-    background: white;
-}
-
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {
-    float: left;
-    width: 75%;
-}
-
-/* Right column */
-.rightcolumn {
-    float: left;
-    width: 25%;
-    padding-left: 20px;
-}
-
-/* Fake image */
-.fakeimg {
-    background-color: #aaa;
-    width: 100%;
-    padding: 20px;
-}
-
-/* Add a card effect for articles */
-.card {
-    background-color: white;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Footer */
-.footer {
-    padding: 20px;
-    text-align: center;
-    background: #ddd;
-    margin-top: 20px;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-    .leftcolumn, .rightcolumn {
-        width: 100%;
-        padding: 0;
-    }
 }

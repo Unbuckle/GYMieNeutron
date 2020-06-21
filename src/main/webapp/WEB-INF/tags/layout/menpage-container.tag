@@ -51,7 +51,6 @@
         <a class="dropdown-item" href="/mBack">Back Workout</a>
         <a class ="dropdown-item" href="/blog">Blog</a>
 
-
         </div>
         </li>
         </ul>
