@@ -23,9 +23,8 @@
                     <div class="form-group">
                         <label for="inputUsername" class="col-md-2 control-label">Username*</label>
                         <div class="col-md-10">
-
-                            <input class="form-control" id="inputUsername" type="text" name="username"
-                                <%--${usernameReadonly} value="<c:out value="${user.username}"/>" required>--%>
+                            <form:input id="inputUsername" path="username" type="text" class="form-control" required="required"/>
+                            <form:errors path="username" cssClass="invalid-feedback d-block"/>
                         </div>
                     </div>
 

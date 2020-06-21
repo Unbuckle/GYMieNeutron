@@ -72,10 +72,20 @@
         </li>
         </ul>
 
-        Logged in as ${currentUser.username} |
-        <form:form method="post" action="/logout">
-            <button class="btn btn-link" type="submit">Log Out</button>
-        </form:form>
+            <c:if test="${currentUser == null}">You are not logged in  |
+                    <form:form method="get" action="/register">
+                            <button class="btn btn-link" type="submit">Sign up</button>
+                    </form:form>
+                    <form:form method="get" action="/">
+                            <button class="btn btn-link" type="submit">Login</button>
+                    </form:form>
+            </c:if>
+
+            <c:if test="${currentUser != null}">Logged in as ${currentUser.username} |
+                    <form:form method="post" action="/logout">
+                            <button class="btn btn-link" type="submit">Log Out</button>
+                    </form:form>
+            </c:if>
         </div>
         </div>
         </nav>
