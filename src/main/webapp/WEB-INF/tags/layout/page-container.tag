@@ -47,7 +47,6 @@
         activePage == 'wBack' or
         activePage == 'wLegs' or
         activePage == 'register' or
-        activePage == 'diary' or
         activePage == 'blog'}">
 
 

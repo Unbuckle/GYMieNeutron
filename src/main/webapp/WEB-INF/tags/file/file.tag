@@ -9,7 +9,7 @@
 <%@taglib prefix="file" tagdir="/WEB-INF/tags/file" %>
 
 <table role="presentation" class="table table-striped">
-    <tbody class="filescontainer"></tbody>
+    <tbody class="filescontainer">
     <c:forEach var="file" items="${value}" varStatus="status">
         <tr>
             <td>
@@ -24,6 +24,7 @@
             </td>
         </tr>
     </c:forEach>
+    </tbody>
 </table>
 
 <input type="file" multiple="true" class="customfileupload form-control"

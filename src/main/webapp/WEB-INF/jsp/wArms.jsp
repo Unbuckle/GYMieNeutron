@@ -9,7 +9,7 @@
 <%@taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 
-<layout:womenpage-container title="Fitness Programs" activePage="mAmrs">
+<layout:womenpage-container title="Arm Workout" activePage="mAmrs">
 
     <html>
     <head>

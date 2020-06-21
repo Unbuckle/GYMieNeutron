@@ -16,7 +16,7 @@
 <%@taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 
-<layout:womenpage-container title="Fitness Programs" activePage="wAbs">
+<layout:womenpage-container title="Ab Workout" activePage="wAbs">
     <html>
     <head>
         <title>Title</title>

@@ -9,7 +9,7 @@
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@taglib prefix="file" tagdir="/WEB-INF/tags/file" %>
 
-<layout:page-container title="User" activePage="editUser">
+<layout:page-container title="Profile" activePage="editUser">
 
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -24,11 +24,17 @@
                 <div class="form-group">
                     <label for="inputUsername" class="col-md-2 control-label">Username*</label>
                     <div class="col-md-10">
-                        <c:if test="${not empty user.id}">
-                            <c:set var="usernameReadonly">readonly</c:set>
-                        </c:if>
-                        <input class="form-control" id="inputUsername" type="text" name="username"
-                            ${usernameReadonly} value="<c:out value="${user.username}"/>" required>
+                        <form:input id="inputUsername" path="username" type="text" class="form-control" required="required"/>
+                        <form:errors path="username" cssClass="invalid-feedback d-block"/>
+                    </div>
+                </div>
+
+                <! ---------------- password ---------------- -->
+                <div class="form-group">
+                    <label for="inputPassword" class="col-md-2 control-label">Password*</label>
+                    <div class="col-md-10">
+                        <form:input id="inputPassword" path="password" type="password" class="form-control" required="required"/>
+                        <form:errors path="password" cssClass="invalid-feedback d-block"/>
                     </div>
                 </div>
 
@@ -36,8 +42,8 @@
                 <div class="form-group">
                     <label for="inputFirstName" class="col-md-2 control-label">First Name*</label>
                     <div class="col-md-10">
-                        <input class="form-control" id="inputFirstName" type="text"
-                               name="firstName" value="<c:out value="${user.firstName}"/>" required>
+                        <form:input id="inputFirstName" path="firstName" type="text" class="form-control" required="required"/>
+                        <form:errors path="firstName" cssClass="invalid-feedback d-block"/>
                     </div>
                 </div>
 
@@ -45,18 +51,17 @@
                 <div class="form-group">
                     <label for="inputLastName" class="col-md-2 control-label">Last Name*</label>
                     <div class="col-md-10">
-                        <input class="form-control" id="inputLastName" type="text"
-                               name="lastName" value="<c:out value="${user.lastName}"/>" required>
+                        <form:input id="inputLastName" path="lastName" type="text" class="form-control" required="required"/>
+                        <form:errors path="lastName" cssClass="invalid-feedback d-block"/>
                     </div>
                 </div>
 
                 <! ---------------- dayOfBirth ---------------- -->
                 <div class="form-group">
-                    <label for="inputDate" class="col-md-2 control-label">Date</label>
+                    <label for="inputDate" class="col-md-2 control-label">Date*</label>
                     <div class="col-md-10">
-                        <input class="form-control" id="inputDate" placeholder="Date"
-                               type="date" name="dayOfBirth"
-                               value="${user.dayOfBirth}" required>
+                        <form:input id="inputDate" path="dayOfBirth" type="date" class="form-control" required="required"/>
+                        <form:errors path="dayOfBirth" cssClass="invalid-feedback d-block"/>
                     </div>
                 </div>
 
@@ -64,8 +69,8 @@
                 <div class="from-group">
                     <label for="inputEmail" class="col-md-2 control-label">Email</label>
                     <div class="col-md-10">
-                        <input class="form-control" id="inputEmail" type="text" name="email"
-                               value="<c:out value="${user.email}"/>">
+                        <form:input id="inputEmail" path="email" type="mail" class="form-control" required="required"/>
+                        <form:errors path="email" cssClass="invalid-feedback d-block"/>
                     </div>
                 </div>
 

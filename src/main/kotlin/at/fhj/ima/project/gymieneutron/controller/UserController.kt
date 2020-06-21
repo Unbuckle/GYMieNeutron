@@ -37,7 +37,6 @@ class UserController (val userRepository: UserRepository,
 
 
     @RequestMapping("/editUser", method = [RequestMethod.GET])
-    @Secured("ROLE_ADMIN")
     fun editUser(model: Model, @RequestParam(required = false) username: String?): String {
         //model.set("programs", programRepository.findAll())
         //model.set("exercises", exerciseRepository.findAll())
@@ -53,7 +52,6 @@ class UserController (val userRepository: UserRepository,
     }
 
     @RequestMapping("/changeUser", method = [RequestMethod.POST])
-    @Secured("ROLE_ADMIN")
     fun changeUser(@ModelAttribute ("user") @Valid user: User,
                    bindingResult: BindingResult, model: Model): String {
         if (bindingResult.hasErrors()) {
@@ -92,18 +90,6 @@ class UserController (val userRepository: UserRepository,
         return listUser(model, null)
     }
 
-    @RequestMapping("/menWorkout", method = [RequestMethod.GET])
-    fun menWorkout(model: Model): String {
-        model.set("programs", programRepository.findAll())
-        return "menWorkout"
-    }
-
-    @RequestMapping("/womenWorkout", method = [RequestMethod.GET])
-    fun womenWorkout(model: Model): String {
-        model.set("programs", programRepository.findAll())
-        return "womenWorkout"
-    }
-
 
     @RequestMapping ("/start", method = [RequestMethod.GET])
     fun start (model: Model): String {
@@ -136,19 +122,6 @@ class UserController (val userRepository: UserRepository,
         }
         return "/start"
     }
-// ----------------------------------------- test blog
- /*   @RequestMapping ("/blog", method = [RequestMethod.GET])
-    fun blog (model: Model): String {
-        model.set("user", userRepository.findAll())
-        return "blog"
-    }*/
-
-    @RequestMapping ("/diary", method = [RequestMethod.GET])
-    fun diary (model: Model): String {
-        model.set("user", userRepository.findAll())
-        return "diary"
-    }
-//------------------------------------------------------
 
 }
 
