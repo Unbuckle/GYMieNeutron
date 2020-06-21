@@ -18,7 +18,7 @@
 
 
 
-<layout:menpage-container title="Back Workout" activePage="menWorkout">
+<layout:menpage-container title="Fitness Programs" activePage="menWorkout">
     <html>
     <head>
         <title>Title</title>

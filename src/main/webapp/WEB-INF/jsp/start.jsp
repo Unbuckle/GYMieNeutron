@@ -10,7 +10,7 @@
 <%@taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 
-<layout:page-container title="GYMie Neutron" activePage="start">
+<layout:page-container title="User" activePage="start">
 
     <html>
     <head>

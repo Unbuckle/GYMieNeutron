@@ -8,7 +8,7 @@
 <%@taglib prefix="layout" tagdir="/WEB-INF/tags/layout" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
-<layout:page-container title="Sign Up" activePage="register">
+<layout:page-container title="User" activePage="register">
 
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -23,8 +23,9 @@
                     <div class="form-group">
                         <label for="inputUsername" class="col-md-2 control-label">Username*</label>
                         <div class="col-md-10">
-                            <form:input id="inputUsername" path="username" type="text" class="form-control" required="required"/>
-                            <form:errors path="username" cssClass="invalid-feedback d-block"/>
+
+                            <input class="form-control" id="inputUsername" type="text" name="username"
+                                <%--${usernameReadonly} value="<c:out value="${user.username}"/>" required>--%>
                         </div>
                     </div>
 

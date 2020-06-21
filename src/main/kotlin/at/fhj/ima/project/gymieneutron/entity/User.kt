@@ -36,7 +36,10 @@ class User(
         @ManyToMany
         var exercise: Set<Exercise>? = null,
         @ManyToMany(fetch = FetchType.EAGER)
-        var files: List<File>? = null
+        var files: List<File>? = null,
+        @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+        var blog: List<Blog>? = null
+
 
 ) : Comparable<User>, Serializable{
     override fun compareTo(other: User): Int {
@@ -55,5 +58,4 @@ class User(
         return username.hashCode()
     }
 }
-
 

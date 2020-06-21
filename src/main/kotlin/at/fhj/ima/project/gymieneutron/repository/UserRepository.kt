@@ -15,6 +15,4 @@ interface UserRepository : JpaRepository<User, Int> {
     @Query("FROM User where username = :username")
     fun findByUsername(@Param("username") username: String): User
 
-
-
 }

@@ -20,7 +20,9 @@ class UserDto(
         @field:Past
         var dayOfBirth: LocalDate? = null,
         var email: String? = null,
-        var files: List<File>? = null
+        var blog: List<Blog>? = null
+
+
 ) : Comparable<User>, Serializable {
     override fun compareTo(other: User): Int {
         return compareValues(id, other.id)

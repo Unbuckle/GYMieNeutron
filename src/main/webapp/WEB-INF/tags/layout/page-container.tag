@@ -21,7 +21,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand" href="/start">
         <div class="logo-image">
         <img src="/images/name.PNG" class="img-fluid" width="250px">
         </div>
@@ -45,7 +45,12 @@
         activePage == 'wAbs' or
         activePage == 'wArms' or
         activePage == 'wBack' or
-        activePage == 'wLegs'}">
+        activePage == 'wLegs' or
+        activePage == 'register' or
+        activePage == 'diary' or
+        activePage == 'blog'}">
+
+
             <c:set var="userMenuActive">active</c:set>
         </c:if>
 
@@ -72,20 +77,10 @@
         </li>
         </ul>
 
-            <c:if test="${currentUser == null}">You are not logged in  |
-                    <form:form method="get" action="/register">
-                            <button class="btn btn-link" type="submit">Sign up</button>
-                    </form:form>
-                    <form:form method="get" action="/">
-                            <button class="btn btn-link" type="submit">Login</button>
-                    </form:form>
-            </c:if>
-
-            <c:if test="${currentUser != null}">Logged in as ${currentUser.username} |
-                    <form:form method="post" action="/logout">
-                            <button class="btn btn-link" type="submit">Log Out</button>
-                    </form:form>
-            </c:if>
+        Logged in as ${currentUser.username} |
+        <form:form method="post" action="/logout">
+            <button class="btn btn-link" type="submit">Log Out</button>
+        </form:form>
         </div>
         </div>
         </nav>

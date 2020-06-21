@@ -17,13 +17,9 @@ class UserService(val userRepository: UserRepository) {
         return convertEntityToDto(newUser)
     }
 
-    fun findByUsername(username: String): UserDto {
-        return convertEntityToDto(userRepository.findByUsername(username))
-    }
-
     private fun convertEntityToDto(entity: User): UserDto {
         return UserDto(entity.id,  entity.username, entity.password,
-                entity.firstName, entity.lastName, entity.dayOfBirth, entity.email)
+                entity.firstName, entity.lastName, entity.dayOfBirth, entity.email, entity.blog)
     }
 
     @Transactional
@@ -47,6 +43,7 @@ class UserService(val userRepository: UserRepository) {
         user.lastName = dto.lastName
         user.dayOfBirth = dto.dayOfBirth
         user.email = dto.email
+        user.blog = dto.blog
         return user
     }
 
@@ -56,10 +53,6 @@ class UserService(val userRepository: UserRepository) {
 
     fun findAll(): List<User> {
         return userRepository.findAll()
-    }
-
-    fun delete(username: String) {
-        userRepository.delete(userRepository.findByUsername(username))
     }
 
 }
